@@ -1,0 +1,23 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int main() {
+    ifstream inFile("Bagazh.txt");
+    ofstream outFile("Sort.txt");
+
+    int numPieces;
+    double weight;
+
+    while (inFile >> numPieces >> weight) {
+        if (weight > 30) {
+            outFile << numPieces << " " << weight << endl;
+        }
+    }
+
+    inFile.close();
+    outFile.close();
+
+    return 0;
+}
