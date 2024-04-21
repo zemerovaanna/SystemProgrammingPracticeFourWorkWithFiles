@@ -1,0 +1,18 @@
+FILE* bagazh = fopen("bagazh.txt", "r");  // Открыть bagazh.txt для чтения один раз
+FILE* sort = fopen("sort.txt", "w");  // Открыть sort.txt для записи один раз
+
+if (bagazh == NULL || sort == NULL) {
+    // Обработка ошибок, если файлы не удалось открыть
+    printf("Ошибка при открытии файлов!\n");
+    return 1;  // Или выход с другим кодом ошибки
+}
+
+while (!feof(bagazh)) {
+    // Чтение данных из bagazh.txt и запись в sort.txt
+    // ... ваш код здесь
+}
+
+fclose(bagazh);  // Закрыть bagazh.txt
+fclose(sort);   // Закрыть sort.txt
+
+// Остальная часть вашей программы
